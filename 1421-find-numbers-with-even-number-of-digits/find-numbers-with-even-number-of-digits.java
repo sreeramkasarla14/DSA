@@ -1,24 +1,23 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        int count = 0;
-        
-        for (int num : nums) {
-            if (hasEvenDigits(num)) {
+        int count=0;
+        for(int num:nums){
+            if(hasEven(num)){
                 count++;
             }
         }
-        
         return count;
     }
-    
-    private boolean hasEvenDigits(int num) {
-        int digits = 0;
-        while (num > 0) {
+    private boolean hasEven(int num){
+        int digits=0;
+        while(num>0){
             digits++;
-            num /= 10;
+            num=num/10;
         }
-        return digits % 2 == 0;
+        return digits%2==0;
     }
-}
 
-    
+
+
+
+}
